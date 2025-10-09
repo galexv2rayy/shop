@@ -146,6 +146,29 @@ footer{margin-top:18px;color:#fff;font-size:14px;text-align:center}
       <p style="margin:6px 0">📢 کانال ما: <a class="link" href="https://t.me/galexv2ray" target="_blank">t.me/galexv2ray</a></p>
     </div>
 
+    <!-- آموزش اتصال -->
+    <div class="section-title" style="margin-top:16px">
+      <div class="title">📱 آموزش اتصال به کانفیگ</div>
+      <div class="note">لینک مستقیم دانلود و آموزش نصب برای هر سیستم عامل</div>
+    </div>
+
+    <div class="packages" style="margin-top:8px">
+      <div class="pkg">
+        <h3>iPhone / iOS</h3>
+        <p>دانلود برنامه و آموزش اتصال</p>
+        <a href="https://t.me/galexv2ray/38" target="_blank">
+          <button>📥 دانلود و آموزش</button>
+        </a>
+      </div>
+      <div class="pkg">
+        <h3>Android</h3>
+        <p>دانلود برنامه و آموزش اتصال</p>
+        <a href="https://t.me/galexv2ray/37" target="_blank">
+          <button>📥 دانلود و آموزش</button>
+        </a>
+      </div>
+    </div>
+
   </section>
 
   <footer style="text-align:center;margin-top:12px;color:#fff">© Galex V2Ray</footer>
@@ -206,7 +229,6 @@ function showPayment(method){
     `;
     document.getElementById('cardBox').classList.remove('hidden');
 
-    // برای دفعه بعد کارت رو پیش‌بینی‌شده تغییر بده تا بازدیدکنندگان بعدی کارت دیگه ببینن
     try{
       assignedIndex = (assignedIndex + 1) % cards.length;
       localStorage.setItem(STORAGE_KEY, String(assignedIndex));
@@ -226,7 +248,6 @@ function showPayment(method){
     document.getElementById('onlineBox').classList.remove('hidden');
   }
 
-  // اسکرول به منطقه پرداخت
   window.scrollTo({ top: document.getElementById('paymentArea').offsetTop - 20, behavior: 'smooth' });
 }
 

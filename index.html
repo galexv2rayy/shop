@@ -235,26 +235,6 @@ footer{margin-top:18px;color:#fff;font-size:16px;text-align:center}
 
 </div>
 
-<script>
-const cards = [
-  { number: "6219861927087113", name: "اسماعیل عابدی" },
-  { number: "6219861880645352", name: "ناظری" },
-  { number: "6219861883000365", name: "امیررضا عابدی" }
-];
-function getRandomCard() {
-  return cards[Math.floor(Math.random()*cards.length)];
-}
-
-let current = { pkg: '', price: '' };
-function selectPackage(pkg, price){
-  current.pkg = pkg; current.price = price;
-  alert(`شما ${pkg} — ${price} را انتخاب کردید`);
-}
-</script>
-
-</body>
-</html>
-
     <!-- انتخاب پرداخت -->
     <div id="choosePayment" class="info-dark hidden">
       <h3 id="selectedPackage" style="margin:0;color:#fff">شما بسته ... را انتخاب کردید</h3>
@@ -344,4 +324,3 @@ function openTelegram(){ window.open('https://t.me/galexv2raysupport', '_blank')
 
 </body>
 </html>
-

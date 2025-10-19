@@ -6,54 +6,51 @@
 <title>Galex V2Ray — خرید و پشتیبانی</title>
 <style>
 @font-face {
-    font-family: 'GraphikArabicSuper';
-    src: url('graphik-arabic-super.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Graphik Arabic Super';
+  src: url('graphik-arabic-super.ttf') format('truetype');
 }
-
 :root{
   --bg1:#4000ea;
   --bg2:#6a4ce6;
   --card-bg: rgba(18,8,45,0.88);
-  --panel-purple: #7b5cff;
+  --panel-purple: #7b5cff; /* کادر بنفش روشن */
   --muted: #bdb6ff;
   --accent-start: #caa3ff;
   --accent-end: #8b5cf6;
 }
 
 /* پایه */
-html,body{height:100%;margin:0;font-family:'GraphikArabicSuper', Vazirmatn, Tahoma, Arial, sans-serif;background: linear-gradient(135deg,var(--bg1),var(--bg2));color:#111;}
+html,body{height:100%;margin:0;font-family:'Graphik Arabic Super', Vazirmatn, Tahoma, Arial, sans-serif;background: linear-gradient(135deg,var(--bg1),var(--bg2));color:#111;}
 .wrap{max-width:980px;margin:18px auto;padding:18px}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent-start),var(--accent-end));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
+.logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent-start),var(--accent-end));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:20px}
 h1{font-size:26px;margin:0;color:#fff;text-align:left}
 p.lead{color:#fff;margin:6px 0 0;font-weight:600;text-align:left;font-size:18px}
-.card{background:var(--card-bg);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.25);color:#fff}
-.section-title{display:flex;flex-direction:column;align-items:flex-start}
+.card{background:var(--card-bg);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.25);color:#fff;margin-top:24px}
+.section-title{display:flex;flex-direction:column;align-items:flex-start;margin-top:24px}
 .section-title .title{font-size:20px;color:#fff;font-weight:700}
-.section-title .note{font-size:15px;color:var(--muted);margin-top:4px}
+.section-title .note{font-size:16px;color:var(--muted);margin-top:6px}
 
 /* بسته‌ها */
 .packages{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
-.pkg{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:14px;border-radius:10px;text-align:center;border:1px solid rgba(255,255,255,0.04)}
+.pkg{background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));padding:14px;border-radius:10px;text-align:center;border:1px solid rgba(255,255,255,0.04);margin-bottom:16px}
 .pkg h3{margin:6px 0;font-size:18px;color:#fff}
-.pkg p{margin:6px 0;color:var(--muted)}
-.pkg button{margin-top:10px;padding:10px 14px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;font-weight:700;cursor:pointer}
+.pkg p{margin:6px 0;color:var(--muted);font-size:16px}
+.pkg button{margin-top:10px;padding:10px 14px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;font-weight:700;cursor:pointer;font-size:16px}
 
 /* انتخاب پرداخت */
 .actions-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:14px}
-.btn-outline{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:#fff;cursor:pointer}
+.btn-outline{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:#fff;cursor:pointer;font-size:16px}
 
 /* کادرهای info (بنفش روشن) */
 .info-light{background:var(--panel-purple);color:#fff;padding:14px;border-radius:10px;margin-top:14px;text-align:right}
 .info-light *{color:#fff !important;}
 .info-light a{color:#fff !important;text-decoration:underline;font-weight:700;}
-.info-light button{background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;margin-top:6px;margin-right:6px}
+.info-light button{background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;margin-top:6px;margin-right:6px;font-size:16px}
 
 /* کادرهای تیره (برای انتخاب پرداخت) */
-.info-dark{background:rgba(255,255,255,0.04);color:#fff;padding:12px;border-radius:10px;margin-top:14px;text-align:right}
+.info-dark{background:rgba(255,255,255,0.04);color:#fff;padding:12px;border-radius:10px;margin-top:14px;text-align:right;font-size:16px}
 
 /* فوتر و لینک */
 a.link{color:#fff;text-decoration:none;font-weight:700}
@@ -66,7 +63,7 @@ footer{margin-top:18px;color:#fff;font-size:16px;text-align:center}
   h1{font-size:22px;text-align:center}
   p.lead{font-size:16px;text-align:center}
   .brand{justify-content:center}
-  .logo{width:48px;height:48px}
+  .logo{width:48px;height:48px;font-size:18px}
   .wrap{padding:12px}
   .pkg h3{font-size:16px}
   .pkg{padding:12px}
@@ -74,11 +71,14 @@ footer{margin-top:18px;color:#fff;font-size:16px;text-align:center}
   .section-title{align-items:center;text-align:center}
 }
 @media (max-width:420px){
-  h1{font-size:20px}
+  h1{font-size:18px}
   .pkg{padding:10px}
   .packages{gap:10px}
   .info-light{text-align:center}
 }
+
+/* فاصله بهتر بخش‌ها */
+.section{margin-top:30px;}
 </style>
 </head>
 <body>
@@ -98,78 +98,139 @@ footer{margin-top:18px;color:#fff;font-size:16px;text-align:center}
       <div><a class="link" href="https://t.me/galexv2raysupport" target="_blank">@galexv2raysupport</a></div>
     </div>
   </header>
+<!-- بسته‌های حجمی (بدون محدودیت زمانی) -->
+<section class="card section">
+  <div class="section-title">
+    <div class="title">📦 بسته‌های حجمی (بدون محدودیت زمانی)</div>
+    <div class="note">پس از پایان حجم، امکان تمدید یا خرید مجدد وجود دارد</div>
+  </div>
 
-  <section class="card" style="margin-top:16px;">
-    <!-- بسته‌های نامحدود -->
+  <div class="packages" style="margin-top:12px">
+    <div class="pkg">
+      <h3>📦 ۱۰ گیگ</h3>
+      <p>💾 حجم: ۱۰ گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۲۵,۰۰۰ تومان</p>
+      <button onclick="selectPackage('۱۰ گیگ — حجمی — تک‌کاربره','25,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 ۲۰ گیگ</h3>
+      <p>💾 حجم: ۲۰ گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۴۹,۰۰۰ تومان</p>
+      <button onclick="selectPackage('۲۰ گیگ — حجمی — تک‌کاربره','49,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 ۳۰ گیگ</h3>
+      <p>💾 حجم: ۳۰ گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۶۹,۰۰۰ تومان</p>
+      <button onclick="selectPackage('۳۰ گیگ — حجمی — تک‌کاربره','69,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 ۴۰ گیگ</h3>
+      <p>💾 حجم: ۴۰ گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۸۹,۰۰۰ تومان</p>
+      <button onclick="selectPackage('۴۰ گیگ — حجمی — تک‌کاربره','89,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 ۶۰ گیگ</h3>
+      <p>💾 حجم: ۶۰ گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۱۱۹,۰۰۰ تومان</p>
+      <button onclick="selectPackage('۶۰ گیگ — حجمی — تک‌کاربره','119,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 ۹۰ گیگ</h3>
+      <p>💾 حجم: ۹۰ گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۱۴۹,۰۰۰ تومان</p>
+      <button onclick="selectPackage('۹۰ گیگ — حجمی — تک‌کاربره','149,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 ۱۰۰ گیگ</h3>
+      <p>💾 حجم: ۱۰۰ گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۱۶۹,۰۰۰ تومان</p>
+      <button onclick="selectPackage('۱۰۰ گیگ — حجمی — تک‌کاربره','169,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 ۱۵۰ گیگ</h3>
+      <p>💾 حجم: ۱۵۰ گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۲۳۹,۰۰۰ تومان</p>
+      <button onclick="selectPackage('۱۵۰ گیگ — حجمی — تک‌کاربره','239,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 ۲۰۰ گیگ</h3>
+      <p>💾 حجم: ۲۰۰ گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۳۲۰,۰۰۰ تومان</p>
+      <button onclick="selectPackage('۲۰۰ گیگ — حجمی — تک‌کاربره','320,000 تومان')">🛒 خرید</button>
+    </div>
+  </div>
+</section>
+    
+<!-- بسته‌های نامحدود / تک‌کاربره -->
+<section class="card section">
+  <div class="section-title">
+    <div class="title">🎯 بسته‌های نامحدود (تک‌کاربره)</div>
+    <div class="note">هر بسته شامل ۱ روز تست رایگان و راهنمای اتصال پس از پرداخت است</div>
+  </div>
+
+  <div class="packages" style="margin-top:12px">
+    <div class="pkg">
+      <h3>🔥 یک‌ماهه</h3>
+      <p>⏳ مدت: ۳۰ روز</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۶۵,۰۰۰ تومان</p>
+      <button onclick="selectPackage('یک‌ماهه — ۳۰ روز — تک‌کاربره','65,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>🔥 دو‌ماهه</h3>
+      <p>⏳ مدت: ۶۰ روز</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۹۹,۰۰۰ تومان</p>
+      <button onclick="selectPackage('دو‌ماهه — ۶۰ روز — تک‌کاربره','99,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>🔥 سه‌ماهه</h3>
+      <p>⏳ مدت: ۹۰ روز</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: ۱۴۰,۰۰۰ تومان</p>
+      <button onclick="selectPackage('سه‌ماهه — ۹۰ روز — تک‌کاربره','140,000 تومان')">🛒 خرید</button>
+    </div>
+  </div>
+</section>
+
+  <!-- کانفیگ‌های Hiddify -->
+  <section class="card section">
     <div class="section-title">
-      <div class="title">🎯 بسته‌های نامحدود تک کاربره</div>
-      <div class="note">تک کاربره یعنی فقط یکنفر همزمان میتواند وصل شود</div>
-    </div>
-    <p style="color:var(--muted);margin-top:6px">یک‌روز تست رایگان موجود است — هر بسته شامل راهنمای اتصال پس از پرداخت است.</p>
-
-    <div class="packages" id="packages">
-      <div class="pkg"><h3>🔥 یک‌ماهه</h3><p>65,000 تومان</p><button onclick="selectPackage('یک‌ماهه','65,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>🔥 دو‌ماهه</h3><p>99,000 تومان</p><button onclick="selectPackage('دو‌ماهه','99,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>🔥 سه‌ماهه</h3><p>140,000 تومان</p><button onclick="selectPackage('سه‌ماهه','140,000 تومان')">🛒 خرید</button></div>
+      <div class="title">📶 کانفیگ‌های Hiddify (با پایداری بالا و امنیت واقعی)</div>
+      <div class="note">چند کاربره یعنی چند نفر همزمان می‌توانند وصل شوند</div>
     </div>
 
-    <!-- بسته‌های حجمی -->
-    <div style="margin-top:16px"></div>
-    <div class="section-title" style="margin-top:6px">
-      <div class="title">📦 بسته‌های حجمی (بدون محدودیت زمانی)</div>
-      <div class="note">تک کاربره یعنی فقط یکنفر همزمان میتواند وصل بشود</div>
-    </div>
-
-    <div class="packages" style="margin-top:8px">
-      <div class="pkg"><h3>10 گیگ</h3><p>25,000 تومان</p><button onclick="selectPackage('10 گیگ','25,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>20 گیگ</h3><p>49,000 تومان</p><button onclick="selectPackage('20 گیگ','49,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>30 گیگ</h3><p>69,000 تومان</p><button onclick="selectPackage('30 گیگ','69,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>40 گیگ</h3><p>89,000 تومان</p><button onclick="selectPackage('40 گیگ','89,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>60 گیگ</h3><p>119,000 تومان</p><button onclick="selectPackage('60 گیگ','119,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>90 گیگ</h3><p>149,000 تومان</p><button onclick="selectPackage('90 گیگ','149,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>100 گیگ</h3><p>169,000 تومان</p><button onclick="selectPackage('100 گیگ','169,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>150 گیگ</h3><p>239,000 تومان</p><button onclick="selectPackage('150 گیگ','239,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>200 گیگ</h3><p>320,000 تومان</p><button onclick="selectPackage('200 گیگ','320,000 تومان')">🛒 خرید</button></div>
-    </div>
-
-    <!-- کانفیگ های Hiddify -->
-    <div style="margin-top:16px"></div>
-    <div class="section-title">
-      <div class="title">📶 کانفیگ‌های Hiddify (چند کاربره)</div>
-      <div class="note">تعداد کاربران همزمان مشخص شده است</div>
-    </div>
-
-    <div class="packages" style="margin-top:8px">
-      <div class="pkg"><h3>چند کاربره</h3><p>50 گیگ — 60 روز — 3 نفر</p><p>120,000 تومان</p><button onclick="selectPackage('50 گیگ — 60 روز — 3 نفر','120,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>چند کاربره</h3><p>200 گیگ — 90 روز — 6 نفر</p><p>400,000 تومان</p><button onclick="selectPackage('200 گیگ — 90 روز — 6 نفر','400,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>چند کاربره</h3><p>500 گیگ — 120 روز — 10 نفر</p><p>700,000 تومان</p><button onclick="selectPackage('500 گیگ — 120 روز — 10 نفر','700,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>چند کاربره</h3><p>100 گیگ — 150 روز — 3 نفر</p><p>200,000 تومان</p><button onclick="selectPackage('100 گیگ — 150 روز — 3 نفر','200,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>چند کاربره</h3><p>150 گیگ — 180 روز — 6 نفر</p><p>350,000 تومان</p><button onclick="selectPackage('150 گیگ — 180 روز — 6 نفر','350,000 تومان')">🛒 خرید</button></div>
-      <div class="pkg"><h3>چند کاربره</h3><p>1000 گیگ — 200 روز — نامحدود</p><p>1,000,000 تومان</p><button onclick="selectPackage('1000 گیگ — 200 روز — نامحدود','1,000,000 تومان')">🛒 خرید</button></div>
-    </div>
-
-    <!-- انتخاب پرداخت -->
-    <div id="choosePayment" class="info-dark hidden">
-      <h3 id="selectedPackage" style="margin:0;color:#fff">شما بسته ... را انتخاب کردید</h3>
-      <div class="actions-row">
-        <button class="btn-outline" onclick="showPayment('card')">💳 کارت به کارت</button>
-        <button class="btn-outline" onclick="showPayment('online')">🌐 درگاه پرداخت آنلاین</button>
-      </div>
-    </div>
-
-    <div id="paymentArea" class="hidden">
-      <div id="cardBox" class="info-light hidden"></div>
-      <div id="onlineBox" class="info-light hidden"></div>
-    </div>
-
-    <!-- پشتیبانی و کانال -->
-    <div style="margin-top:14px;color:#fff">
-      <p style="margin:6px 0">📩 پشتیبانی: <a class="link" href="https://t.me/galexv2raysupport" target="_blank">@galexv2raysupport</a></p>
-      <p style="margin:6px 0">📢 کانال ما: <a class="link" href="https://t.me/galexv2ray" target="_blank">t.me/galexv2ray</a></p>
+    <div class="packages">
+      <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: ۵۰ گیگ</p><p>⏳ مدت: ۶۰ روز</p><p>👥 کاربران همزمان: ۳ نفر</p><p>💰 قیمت: ۱۲۰,۰۰۰ تومان</p><button onclick="selectPackage('50 گیگ', '120,000 تومان')">🛒 خرید</button></div>
+      <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: ۱۰۰ گیگ</p><p>⏳ مدت: ۹۰ روز</p><p>👥 کاربران همزمان: ۵ نفر</p><p>💰 قیمت: ۲۴۰,۰۰۰ تومان</p><button onclick="selectPackage('100 گیگ', '240,000 تومان')">🛒 خرید</button></div>
+      <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: ۱۵۰ گیگ</p><p>⏳ مدت: ۱۲۰ روز</p><p>👥 کاربران همزمان: ۷ نفر</p><p>💰 قیمت: ۳۶۰,۰۰۰ تومان</p><button onclick="selectPackage('150 گیگ', '360,000 تومان')">🛒 خرید</button></div>
+      <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: ۲۰۰ گیگ</p><p>⏳ مدت: ۱۸۰ روز</p><p>👥 کاربران همزمان: ۱۰ نفر</p><p>💰 قیمت: ۴۰۰,۰۰۰ تومان</p><button onclick="selectPackage('200 گیگ', '400,000 تومان')">🛒 خرید</button></div>
+      <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: ۵۰۰ گیگ</p><p>⏳ مدت: ۱۲۰ روز</p><p>👥 کاربران همزمان: ۱۰ نفر</p><p>💰 قیمت: ۷۰۰,۰۰۰ تومان</p><button onclick="selectPackage('500 گیگ', '700,000 تومان')">🛒 خرید</button></div>
+      <div class="pkg"><h3>💎 پلاتینیوم (ویژه)</h3><p>💾 حجم: ۱,۰۰۰ گیگ</p><p>⏳ مدت: ۲۰۰ روز</p><p>👥 کاربران همزمان: نامحدود 🚀</p><p>💰 قیمت: ۱,۰۰۰,۰۰۰ تومان</p><button onclick="selectPackage('1000 گیگ', '1,000,000 تومان')">🛒 خرید</button></div>
     </div>
   </section>
 
-  <footer style="text-align:center;margin-top:12px;color:#fff">© Galex V2Ray</footer>
 </div>
 
 <script>
@@ -178,61 +239,15 @@ const cards = [
   { number: "6219861880645352", name: "ناظری" },
   { number: "6219861883000365", name: "امیررضا عابدی" }
 ];
+function getRandomCard() {
+  return cards[Math.floor(Math.random()*cards.length)];
+}
 
+let current = { pkg: '', price: '' };
 function selectPackage(pkg, price){
-  current = { pkg, price };
-  document.getElementById('selectedPackage').innerText = `شما ${pkg} — ${price} را انتخاب کردید`;
-  document.getElementById('choosePayment').classList.remove('hidden');
-  document.getElementById('paymentArea').classList.add('hidden');
-  document.getElementById('cardBox').classList.add('hidden');
-  document.getElementById('onlineBox').classList.add('hidden');
-  window.scrollTo({ top: document.getElementById('choosePayment').offsetTop - 20, behavior: 'smooth' });
+  current.pkg = pkg; current.price = price;
+  alert(`شما ${pkg} — ${price} را انتخاب کردید`);
 }
-
-function showPayment(method){
-  document.getElementById('paymentArea').classList.remove('hidden');
-  document.getElementById('cardBox').classList.add('hidden');
-  document.getElementById('onlineBox').classList.add('hidden');
-  if(method==='card'){
-    const c = cards[Math.floor(Math.random()*cards.length)];
-    document.getElementById('cardBox').innerHTML = `
-      <h3>💳 کارت به کارت</h3>
-      <p><strong>شماره کارت:</strong> ${c.number}</p>
-      <p><strong>به نام:</strong> ${c.name}</p>
-      <p><strong>مبلغ:</strong> ${current.price}</p>
-      <p style="font-weight:700">وقتی مبلغ واریز شد، رسید را برای پشتیبان ارسال کنید.</p>
-      <p style="margin-top:8px">
-        <button onclick="copyCard('${c.number}')">کپی شماره کارت</button>
-        <button onclick="openTelegram()">ارسال رسید</button>
-      </p>`;
-    document.getElementById('cardBox').classList.remove('hidden');
-  } else if(method==='online'){
-    document.getElementById('onlineBox').innerHTML = `
-      <h3>🌐 درگاه پرداخت آنلاین</h3>
-      <p><strong>آموزش خرید (مرحله به مرحله):</strong></p>
-      <ol style="text-align:right">
-        <li>وارد لینک درگاه پرداخت شوید: <a href="https://coffeebede.com/dashleper" target="_blank">https://coffeebede.com/dashleper</a></li>
-        <li>در قسمت «نام»، نام خودتان را وارد کنید.</li>
-        <li>در قسمت «مبلغ»، مبلغ سرویس را وارد کنید. مثال: ${current.price}</li>
-        <li>پرداخت را انجام دهید و رسید را ذخیره کنید.</li>
-        <li>رسید را برای پشتیبان ارسال کنید: <a href="https://t.me/galexv2raysupport" target="_blank">@galexv2raysupport</a></li>
-      </ol>`;
-    document.getElementById('onlineBox').classList.remove('hidden');
-  }
-  window.scrollTo({ top: document.getElementById('paymentArea').offsetTop - 20, behavior: 'smooth' });
-}
-
-function copyCard(number){
-  if(navigator.clipboard && navigator.clipboard.writeText){
-    navigator.clipboard.writeText(number).then(()=> alert('شماره کارت کپی شد: ' + number));
-  } else {
-    const ta=document.createElement('textarea'); ta.value=number; document.body.appendChild(ta); ta.select();
-    try{ document.execCommand('copy'); alert('شماره کارت کپی شد: ' + number);}catch(e){ alert('لطفاً شماره کارت را دستی کپی کنید: ' + number);}
-    ta.remove();
-  }
-}
-
-function openTelegram(){ window.open('https://t.me/galexv2raysupport', '_blank'); }
 </script>
 
 </body>

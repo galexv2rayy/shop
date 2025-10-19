@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
+<style>
+    /* بارگذاری فونت */
+    @font-face {
+        font-family: 'Graphik Arabic Super';
+        src: url('./graphik-arabic-super.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    /* اعمال فونت روی بولد و سرتیتر */
+    b, strong,
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Graphik Arabic Super', sans-serif !important;
+    }
+
+    /* اعمال فونت روی تمام دکمه‌ها */
+    button {
+        font-family: 'Graphik Arabic Super', sans-serif !important;
+    }
+</style>
+
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Galex V2Ray — خرید و پشتیبانی</title>
 <style>
-@font-face{
-  font-family: 'Graphik Arabic';
-  src: url('graphik-arabic-super.ttf') format('truetype');
-}
-:root{
-  --bg1:#4000ea;
-  --bg2:#6a4ce6;
+:root {
+  --bg1: #4000ea;
+  --bg2: #20068f; /* قبلاً تغییر دادیم */
   --card-bg: rgba(18,8,45,0.88);
   --panel-purple: #7b5cff;
   --muted: #bdb6ff;
   --accent-start: #caa3ff;
-  --accent-end: #8b5cf6;
+  --accent-end: #9621fc; /* رنگ جدید */
 }
-html,body{height:100%;margin:0;font-family:'Graphik Arabic', Vazirmatn, Tahoma, Arial, sans-serif;background: linear-gradient(135deg,var(--bg1),var(--bg2));color:#111;}
+html,body{height:100%;margin:0;font-family: Vazirmatn, Tahoma, Arial, sans-serif;background: linear-gradient(135deg,var(--bg1),var(--bg2));color:#111;}
 .wrap{max-width:980px;margin:18px auto;padding:18px}
 header{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .brand{display:flex;align-items:center;gap:12px}
@@ -36,11 +53,11 @@ p.lead{color:#fff;margin:6px 0 0;font-weight:600;text-align:left}
 .pkg button{margin-top:10px;padding:10px 14px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;font-weight:700;cursor:pointer}
 .actions-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:14px}
 .btn-outline{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:#fff;cursor:pointer}
-.info-light{background:var(--card-bg);color:#fff;padding:14px;border-radius:10px;margin-top:14px;text-align:right} /* برای پلن‌ها */
-.info-dark{background:var(--panel-purple);color:#fff;padding:14px;border-radius:10px;margin-top:14px;text-align:right} /* برای پشتیبانی و آموزش نصب */
-.info-dark *{color:#fff !important;}
-.info-dark a{color:#fff !important;text-decoration:underline;font-weight:700;}
-.info-dark button{background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;margin-top:6px;margin-right:6px}
+.info-light{background:var(--panel-purple);color:#fff;padding:14px;border-radius:10px;margin-top:14px;text-align:right}
+.info-light *{color:#fff !important;}
+.info-light a{color:#fff !important;text-decoration:underline;font-weight:700;}
+.info-light button{background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;margin-top:6px;margin-right:6px}
+.info-dark{background:rgba(255,255,255,0.04);color:#fff;padding:12px;border-radius:10px;margin-top:14px;text-align:right}
 a.link{color:#fff;text-decoration:none;font-weight:700}
 footer{margin-top:18px;color:#fff;font-size:14px;text-align:center}
 .hidden{display:none;}
@@ -83,7 +100,7 @@ footer{margin-top:18px;color:#fff;font-size:14px;text-align:center}
   </header>
 
   <section class="card" style="margin-top:16px;">
-
+    
 <!-- بسته‌های حجمی (بدون محدودیت زمانی) -->
 <section class="card section">
   <div class="section-title">
@@ -92,19 +109,111 @@ footer{margin-top:18px;color:#fff;font-size:14px;text-align:center}
   </div>
 
   <div class="packages" style="margin-top:12px">
-    <!-- محتوا مشابه قبل -->
+    <div class="pkg">
+      <h3>📦 10 گیگ</h3>
+      <p>💾 حجم: 10 گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 25,000 تومان</p>
+      <button onclick="selectPackage('10 گیگ — حجمی — تک‌کاربره','25,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 20 گیگ</h3>
+      <p>💾 حجم: 20 گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 49,000 تومان</p>
+      <button onclick="selectPackage('20 گیگ — حجمی — تک‌کاربره','49,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 30 گیگ</h3>
+      <p>💾 حجم: 30 گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 69,000 تومان</p>
+      <button onclick="selectPackage('30 گیگ — حجمی — تک‌کاربره','69,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 40 گیگ</h3>
+      <p>💾 حجم: 40 گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 89,000 تومان</p>
+      <button onclick="selectPackage('40 گیگ — حجمی — تک‌کاربره','89,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 60 گیگ</h3>
+      <p>💾 حجم: 60 گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 119,000 تومان</p>
+      <button onclick="selectPackage('60 گیگ — حجمی — تک‌کاربره','119,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 90 گیگ</h3>
+      <p>💾 حجم: 90 گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 149,000 تومان</p>
+      <button onclick="selectPackage('90 گیگ — حجمی — تک‌کاربره','149,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 100 گیگ</h3>
+      <p>💾 حجم: 100 گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 169,000 تومان</p>
+      <button onclick="selectPackage('100 گیگ — حجمی — تک‌کاربره','169,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 150 گیگ</h3>
+      <p>💾 حجم: 150 گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 239,000 تومان</p>
+      <button onclick="selectPackage('150 گیگ — حجمی — تک‌کاربره','239,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>📦 200 گیگ</h3>
+      <p>💾 حجم: 200 گیگ</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 320,000 تومان</p>
+      <button onclick="selectPackage('200 گیگ — حجمی — تک‌کاربره','320,000 تومان')">🛒 خرید</button>
+    </div>
   </div>
 </section>
-
+    
 <!-- بسته‌های نامحدود / تک‌کاربره -->
 <section class="card section">
   <div class="section-title">
     <div class="title">🎯 بسته‌های نامحدود (تک‌کاربره)</div>
-    <div class="note">هر بسته شامل ۱ روز تست رایگان و راهنمای اتصال پس از پرداخت است</div>
+    <div class="note">هر بسته شامل 1 روز تست رایگان و راهنمای اتصال پس از پرداخت است</div>
   </div>
 
   <div class="packages" style="margin-top:12px">
-    <!-- محتوا مشابه قبل -->
+    <div class="pkg">
+      <h3>🔥 یک‌ماهه</h3>
+      <p>⏳ مدت: 30 روز</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 65,000 تومان</p>
+      <button onclick="selectPackage('یک‌ماهه — 30 روز — تک‌کاربره','65,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>🔥 دو‌ماهه</h3>
+      <p>⏳ مدت: 60 روز</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 99,000 تومان</p>
+      <button onclick="selectPackage('دو‌ماهه — 60 روز — تک‌کاربره','99,000 تومان')">🛒 خرید</button>
+    </div>
+
+    <div class="pkg">
+      <h3>🔥 سه‌ماهه</h3>
+      <p>⏳ مدت: 90 روز</p>
+      <p>👤 تک‌کاربره</p>
+      <p>💰 قیمت: 140,000 تومان</p>
+      <button onclick="selectPackage('سه‌ماهه — 90 روز — تک‌کاربره','140,000 تومان')">🛒 خرید</button>
+    </div>
   </div>
 </section>
 
@@ -116,55 +225,61 @@ footer{margin-top:18px;color:#fff;font-size:14px;text-align:center}
   </div>
 
   <div class="packages">
-    <!-- محتوا مشابه قبل -->
+    <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: 50 گیگ</p><p>⏳ مدت: 60 روز</p><p>👥 کاربران همزمان: 3 نفر</p><p>💰 قیمت: 120,000 تومان</p><button onclick="selectPackage('50 گیگ', '120,000 تومان')">🛒 خرید</button></div>
+    <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: 100 گیگ</p><p>⏳ مدت: 90 روز</p><p>👥 کاربران همزمان: 5 نفر</p><p>💰 قیمت: 240,000 تومان</p><button onclick="selectPackage('100 گیگ', '240,000 تومان')">🛒 خرید</button></div>
+    <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: 150 گیگ</p><p>⏳ مدت: 120 روز</p><p>👥 کاربران همزمان: 7 نفر</p><p>💰 قیمت: 360,000 تومان</p><button onclick="selectPackage('150 گیگ', '360,000 تومان')">🛒 خرید</button></div>
+    <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: 200 گیگ</p><p>⏳ مدت: 120 روز</p><p>👥 کاربران همزمان: 10 نفر</p><p>💰 قیمت: 399,000 تومان</p><button onclick="selectPackage('200 گیگ', '399,000 تومان')">🛒 خرید</button></div>
+    <div class="pkg"><h3>💎 چند کاربره</h3><p>💾 حجم: 500 گیگ</p><p>⏳ مدت: 180 روز</p><p>👥 کاربران همزمان: 10 نفر</p><p>💰 قیمت: 695,000 تومان</p><button onclick="selectPackage('500 گیگ', '695,000 تومان')">🛒 خرید</button></div>
+    <div class="pkg"><h3>💎 پلاتینیوم (ویژه)</h3><p>💾 حجم: 1,000 گیگ</p><p>⏳ مدت: 200 روز</p><p>👥 کاربران همزمان: نامحدود 🚀</p><p>💰 قیمت: 999,000 تومان</p><button onclick="selectPackage('1000 گیگ', '999,000 تومان')">🛒 خرید</button></div>
   </div>
 </section>
 
 </div>
 
-<!-- انتخاب پرداخت -->
-<div id="choosePayment" class="info-dark hidden">
-  <h3 id="selectedPackage" style="margin:0;color:#fff">شما بسته ... را انتخاب کردید</h3>
-  <div class="actions-row">
-    <button class="btn-outline" onclick="showPayment('card')">💳 کارت به کارت</button>
-    <button class="btn-outline" onclick="showPayment('online')">🌐 درگاه پرداخت آنلاین</button>
-  </div>
-</div>
-
-<!-- باکس های پرداخت -->
-<div id="paymentArea" class="hidden">
-  <div id="cardBox" class="info-dark hidden"></div>
-  <div id="onlineBox" class="info-dark hidden"></div>
-</div>
-
-<!-- پشتیبانی و کانال -->
-<div class="info-dark" style="margin-top:14px">
-  <p style="margin:6px 0">📩 پشتیبانی: <a class="link" href="https://t.me/galexv2raysupport" target="_blank">@galexv2raysupport</a></p>
-  <p style="margin:6px 0">📢 کانال ما: <a class="link" href="https://t.me/galexv2ray" target="_blank">t.me/galexv2ray</a></p>
-</div>
-
-<!-- آموزش اتصال -->
-<div class="info-dark" style="margin-top:16px">
-  <div class="section-title">
-    <div class="title">📱 آموزش اتصال به کانفیگ</div>
-    <div class="note">لینک مستقیم دانلود و آموزش نصب برای هر سیستم عامل</div>
-  </div>
-
-  <div class="packages" style="margin-top:8px">
-    <div class="pkg">
-      <h3>iPhone / iOS</h3>
-      <p>دانلود برنامه و آموزش اتصال</p>
-      <a href="https://t.me/galexv2ray/38" target="_blank"><button>📥 دانلود و آموزش</button></a>
+    <!-- انتخاب پرداخت -->
+    <div id="choosePayment" class="info-dark hidden">
+      <h3 id="selectedPackage" style="margin:0;color:#fff">شما بسته ... را انتخاب کردید</h3>
+      <div class="actions-row">
+        <button class="btn-outline" onclick="showPayment('card')">💳 کارت به کارت</button>
+        <button class="btn-outline" onclick="showPayment('online')">🌐 درگاه پرداخت آنلاین</button>
+      </div>
     </div>
-    <div class="pkg">
-      <h3>Android</h3>
-      <p>دانلود برنامه و آموزش اتصال</p>
-      <a href="https://t.me/galexv2ray/37" target="_blank"><button>📥 دانلود و آموزش</button></a>
-    </div>
-  </div>
-</div>
 
-<footer style="text-align:center;margin-top:12px;color:#fff">© Galex V2Ray</footer>
+    <!-- باکس های پرداخت -->
+    <div id="paymentArea" class="hidden">
+      <div id="cardBox" class="info-light hidden"></div>
+      <div id="onlineBox" class="info-light hidden"></div>
+    </div>
+
+    <!-- پشتیبانی و کانال -->
+    <div style="margin-top:14px;color:#fff">
+      <p style="margin:6px 0">📩 پشتیبانی: <a class="link" href="https://t.me/galexv2raysupport" target="_blank">@galexv2raysupport</a></p>
+      <p style="margin:6px 0">📢 کانال ما: <a class="link" href="https://t.me/galexv2ray" target="_blank">t.me/galexv2ray</a></p>
+    </div>
+
+    <!-- آموزش اتصال -->
+    <div class="section-title" style="margin-top:16px">
+      <div class="title">📱 آموزش اتصال به کانفیگ</div>
+      <div class="note">لینک مستقیم دانلود و آموزش نصب برای هر سیستم عامل</div>
+    </div>
+
+    <div class="packages" style="margin-top:8px">
+      <div class="pkg">
+        <h3>iPhone / iOS</h3>
+        <p>دانلود برنامه و آموزش اتصال</p>
+        <a href="https://t.me/galexv2ray/38" target="_blank"><button>📥 دانلود و آموزش</button></a>
+      </div>
+      <div class="pkg">
+        <h3>Android</h3>
+        <p>دانلود برنامه و آموزش اتصال</p>
+        <a href="https://t.me/galexv2ray/37" target="_blank"><button>📥 دانلود و آموزش</button></a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer style="text-align:center;margin-top:12px;color:#fff">© Galex V2Ray</footer>
+</div>
 
 <script>
 const cards = [
@@ -234,3 +349,4 @@ function openTelegram(){ window.open('https://t.me/galexv2raysupport', '_blank')
 
 </body>
 </html>
+

@@ -22,6 +22,17 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px}
 h1{font-size:22px;margin:0;color:#fff;text-align:left}
 p.lead{color:#fff;margin:6px 0 0;font-weight:600;text-align:left}
 .card{background:var(--card-bg);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,0.25);color:#fff}
+
+/* جدید: کلاس boxed برای کادرهای بنفش تیره مشابه پلن‌ها */
+.boxed{
+  border:2px solid var(--panel-purple);
+  border-radius:12px;
+  padding:14px;
+  background: linear-gradient(180deg, rgba(123,92,255,0.04), rgba(18,8,45,0.92));
+  color:#fff;
+}
+
+/* همسان‌سازی info-light/info-dark با کادر بنفش */
 .section-title{display:flex;flex-direction:column;align-items:flex-start}
 .section-title .title{font-size:18px;color:#fff;font-weight:700}
 .section-title .note{font-size:13px;color:var(--muted);margin-top:4px}
@@ -32,11 +43,11 @@ p.lead{color:#fff;margin:6px 0 0;font-weight:600;text-align:left}
 .pkg button{margin-top:10px;padding:10px 14px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;font-weight:700;cursor:pointer}
 .actions-row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:14px}
 .btn-outline{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.12);background:transparent;color:#fff;cursor:pointer}
-.info-light{background:var(--panel-purple);color:#fff;padding:14px;border-radius:10px;margin-top:14px;text-align:right}
+.info-light{background:var(--panel-purple);color:#fff;padding:14px;border-radius:10px;margin-top:14px;text-align:right;border:2px solid var(--panel-purple)}
 .info-light *{color:#fff !important;}
 .info-light a{color:#fff !important;text-decoration:underline;font-weight:700;}
 .info-light button{background:linear-gradient(90deg,var(--accent-start),var(--accent-end));color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;margin-top:6px;margin-right:6px}
-.info-dark{background:rgba(255,255,255,0.04);color:#fff;padding:12px;border-radius:10px;margin-top:14px;text-align:right}
+.info-dark{background:rgba(255,255,255,0.04);color:#fff;padding:12px;border-radius:10px;margin-top:14px;text-align:right;border:2px solid var(--panel-purple)}
 a.link{color:#fff;text-decoration:none;font-weight:700}
 footer{margin-top:18px;color:#fff;font-size:14px;text-align:center}
 .hidden{display:none;}
@@ -64,9 +75,10 @@ footer{margin-top:18px;color:#fff;font-size:14px;text-align:center}
 
 <div class="wrap">
   <header>
-    <div class="brand">
+    <!-- خوش‌آمدگویی الآن داخل boxed قرار گرفت -->
+    <div class="brand boxed" style="flex:1;gap:12px;">
       <div class="logo">G</div>
-      <div>
+      <div style="min-width:0">
         <h1>🚀 به Galex V2Ray خوش آمدید!</h1>
         <p class="lead">✨ تست رایگان 1 روزه + ضمانت بازگشت وجه در صورت نارضایتی ✨</p>
       </div>
@@ -216,7 +228,8 @@ footer{margin-top:18px;color:#fff;font-size:14px;text-align:center}
 </div>
 
     <!-- انتخاب پرداخت -->
-    <div id="choosePayment" class="info-dark hidden">
+    <!-- از info-dark به info-light همراه با boxed تغییر کرد تا کادر بنفش داشته باشد -->
+    <div id="choosePayment" class="info-light boxed hidden">
       <h3 id="selectedPackage" style="margin:0;color:#fff">شما بسته ... را انتخاب کردید</h3>
       <div class="actions-row">
         <button class="btn-outline" onclick="showPayment('card')">💳 کارت به کارت</button>
@@ -225,33 +238,36 @@ footer{margin-top:18px;color:#fff;font-size:14px;text-align:center}
     </div>
 
     <!-- باکس های پرداخت -->
-    <div id="paymentArea" class="hidden">
-      <div id="cardBox" class="info-light hidden"></div>
-      <div id="onlineBox" class="info-light hidden"></div>
+    <div id="paymentArea" class="hidden" style="margin-top:12px;">
+      <!-- هر کدام از باکس‌ها اکنون info-light + boxed دارند تا کادر بنفش ثابت شود -->
+      <div id="cardBox" class="info-light boxed hidden"></div>
+      <div id="onlineBox" class="info-light boxed hidden" style="margin-top:10px;"></div>
     </div>
 
-    <!-- پشتیبانی و کانال -->
-    <div style="margin-top:14px;color:#fff">
+    <!-- پشتیبانی و کانال — حالا boxed دارد -->
+    <div class="boxed" style="margin-top:14px;color:#fff">
       <p style="margin:6px 0">📩 پشتیبانی: <a class="link" href="https://t.me/galexv2raysupport" target="_blank">@galexv2raysupport</a></p>
       <p style="margin:6px 0">📢 کانال ما: <a class="link" href="https://t.me/galexv2ray" target="_blank">t.me/galexv2ray</a></p>
     </div>
 
-    <!-- آموزش اتصال -->
-    <div class="section-title" style="margin-top:16px">
-      <div class="title">📱 آموزش اتصال به کانفیگ</div>
-      <div class="note">لینک مستقیم دانلود و آموزش نصب برای هر سیستم عامل</div>
-    </div>
-
-    <div class="packages" style="margin-top:8px">
-      <div class="pkg">
-        <h3>iPhone / iOS</h3>
-        <p>دانلود برنامه و آموزش اتصال</p>
-        <a href="https://t.me/galexv2ray/38" target="_blank"><button>📥 دانلود و آموزش</button></a>
+    <!-- آموزش اتصال — تمام بخش آموزش داخل boxed قرار گرفت -->
+    <div class="boxed" style="margin-top:16px">
+      <div class="section-title" >
+        <div class="title">📱 آموزش اتصال به کانفیگ</div>
+        <div class="note">لینک مستقیم دانلود و آموزش نصب برای هر سیستم عامل</div>
       </div>
-      <div class="pkg">
-        <h3>Android</h3>
-        <p>دانلود برنامه و آموزش اتصال</p>
-        <a href="https://t.me/galexv2ray/37" target="_blank"><button>📥 دانلود و آموزش</button></a>
+
+      <div class="packages" style="margin-top:8px">
+        <div class="pkg">
+          <h3>iPhone / iOS</h3>
+          <p>دانلود برنامه و آموزش اتصال</p>
+          <a href="https://t.me/galexv2ray/38" target="_blank"><button>📥 دانلود و آموزش</button></a>
+        </div>
+        <div class="pkg">
+          <h3>Android</h3>
+          <p>دانلود برنامه و آموزش اتصال</p>
+          <a href="https://t.me/galexv2ray/37" target="_blank"><button>📥 دانلود و آموزش</button></a>
+        </div>
       </div>
     </div>
 
